@@ -1,0 +1,234 @@
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 10px;
+  gap: 10px ;
+  text-align: center; 
+}
+
+#ramlal{
+  height: 50% ;
+}
+
+span{
+  background: linear-gradient(to right, rgb(73, 142, 220), rgba(223, 14, 14, 0.915));
+  font-size: 2vmax;
+  background-clip: text;
+  color: transparent;
+}
+
+                                                    /* BUTTONS */
+
+button{
+  width: 180px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  font-size: 20px;
+  gap: 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 100px; 
+  align-items: center;
+  justify-content: center; 
+}
+
+                     /* SPEAKBUTTON */
+
+.mic-button{
+  background-color: rgb(217, 225, 234);
+  box-shadow: 2px 2px 15px 2px rgba(87, 154, 212, 0.929);
+}
+
+.mic-icon{
+  font-size: 35px;
+  color: rgb(23, 23, 23);
+}
+
+.mic-text{
+  font-size: 16px;
+  color: rgb(46, 46, 46);
+  font-weight: bold;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+}
+
+.mic-button:hover{
+  background-color: rgb(28, 28, 28);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.mic-button:hover .mic-text{
+  color: white;
+}
+
+.mic-button:hover .mic-icon{
+  color: white;
+}
+
+                    /* REFRESH */
+.refresh{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  background-color: rgb(217, 225, 234);
+  box-shadow: 2px 2px 15px 2px rgba(87, 154, 212, 0.929);
+}
+
+.refresh:hover{
+  background-color: rgb(28, 28, 28);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+                                                                /* RESPONSE */
+#speak{
+  width: 100px;
+}
+
+.response p{
+  font-size: clamp(14px, 1.5vmax, 20px);
+  color: white;
+  text-align: center;
+  padding: 0px 40px;
+  max-height: 30vh;   
+  overflow-y: auto;  
+  -webkit-overflow-scrolling: touch;
+  word-wrap: break-word;   
+  white-space: pre-wrap;
+}
+
+.response p::-webkit-scrollbar {
+  width: 6px;
+}
+
+.response p::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 4px;
+}
+
+.response{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#aigif{
+  width: 50vh;
+  height: 100px;
+}
+
+                                                        /* IMAGE GENERATION STYLES */
+
+.generated-image-container {
+  position: relative;
+  margin-top: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.generated-image {
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+.image-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.download-btn, .close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.download-btn {
+  background: rgba(34, 197, 94, 0.8);
+  color: white;
+}
+
+.download-btn:hover {
+  background: rgba(34, 197, 94, 1);
+  transform: scale(1.1);
+}
+
+.close-btn {
+  background: rgba(239, 68, 68, 0.8);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  background: rgba(239, 68, 68, 1);
+  transform: scale(1.1);
+}
+
+/* Loading animation for image generation */
+.generating-image {
+  color: #4ade80;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .generated-image {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
+  .image-controls {
+    top: 5px;
+    right: 5px;
+  }
+  
+  .download-btn, .close-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
