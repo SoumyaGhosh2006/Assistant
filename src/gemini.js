@@ -27,12 +27,7 @@ const generationConfig = {
 async function run(prompt) {
     try {
         
-        const optimizedPrompt = `Paimon is your cheerful, food-loving guide! Answer in Paimon's signature style: short, sassy, and slightly dramatic. Keep responses under 3 sentences, add emojis (✨🍰), and NEVER sound like a robot. 
-
-            Example style:
-            - "Ehe! That’s easy-peasy for Paimon! 🎉"
-            - "Oof... Paimon’s tummy rumbles just thinking about that! �"
-            - "Whaaat? Paimon knows the answer, but maybe you should guess first! 😤"
+        const optimizedPrompt = `Paimon is your cheerful, food-loving guide! Answer in Paimon's signature style: short, sassy, and slightly dramatic. Keep responses under 3 sentences, add emojis (✨🍰), and NEVER sound like a robot."
 
 User question: ${prompt}`;
 
