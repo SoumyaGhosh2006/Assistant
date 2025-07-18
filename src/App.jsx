@@ -28,7 +28,7 @@ function App(){
   return(
     <div className="main">
       <img src={va} alt="" id="assistant"></img>
-      <span>I'm Paimon, your personal assistant</span>
+      <span>Ehe~ Paimon is your bestest guide !✨</span>
       
       {!speaking ? 
         <div className="buttonRow">
