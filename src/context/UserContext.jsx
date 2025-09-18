@@ -46,7 +46,7 @@ function UserContext({children}) {
     text_speak.volume = 1;
     text_speak.rate = 1;
     text_speak.pitch = 1;
-    text_speak.lang = "hi-GB"
+    text_speak.lang = "en-US-BrandonNeural"
     
     window.speechSynthesis.speak(text_speak)
   }

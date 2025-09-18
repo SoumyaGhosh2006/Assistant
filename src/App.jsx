@@ -23,12 +23,25 @@ function App(){
     setGeneratedImage
   } = useContext(datacontext);
 
-  
+  const downloadImage = () => {
+    if (generatedImage) {
+      const link = document.createElement('a');
+      link.href = generatedImage;
+      link.download = `Paimon-generated-image-${Date.now()}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
+  const closeImage = () => {
+    setGeneratedImage(null);
+  };
 
   return(
     <div className="main">
-      <img src={va} alt="" id="assistant"></img>
-      <span>Ehe~ Paimon is your bestest guide !✨</span>
+      <img src={va} alt="" id="Paimon"></img>
+      <span>I'm Paimon, your personal guide</span>
       
       {!speaking ? 
         <div className="buttonRow">
