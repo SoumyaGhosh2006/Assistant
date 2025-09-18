@@ -9,14 +9,14 @@ if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) 
 }
 
 function UserContext({children}) {
-  const ASSISTANT_NAME = "Paimon";
+  const ASSISTANT_NAME = "Ramlal";
 
   let [speaking, setSpeaking] = useState(false)
   let [prompt, setPrompt] = useState("Listening...")
   let [response, setResponse] = useState(false)
   let [waitingForClick, setWaitingForClick] = useState(false)
   const [isPressed, setIsPressed] = useState(false);
-  const [assistantName, setAssistantName] = useState("Paimon");
+  const [assistantName, setAssistantName] = useState("Ramlal");
   const [generatedImage, setGeneratedImage] = useState(null);
 
   // Initialize NLP command processor
@@ -46,7 +46,7 @@ function UserContext({children}) {
     text_speak.volume = 1;
     text_speak.rate = 1;
     text_speak.pitch = 1;
-    text_speak.lang = "hi-GB"
+    text_speak.lang = "en-US-BrandonNeural"
     
     window.speechSynthesis.speak(text_speak)
   }
