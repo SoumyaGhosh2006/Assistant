@@ -3,7 +3,7 @@ import "./App.css"
 import { FaMicrophone, FaDownload } from "react-icons/fa";
 import { LuRefreshCcw } from "react-icons/lu";
 import speakimg from "./assets/speak.gif"
-import va from "./assets/Paimon.png"
+import va from "./assets/paimon2.png"
 import voicegif from "./assets/aiVoice.gif"
 import { datacontext } from "./context/UserContext";
 
