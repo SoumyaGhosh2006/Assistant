@@ -9,14 +9,14 @@ if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) 
 }
 
 function UserContext({children}) {
-  const ASSISTANT_NAME = "Ramlal";
+  const ASSISTANT_NAME = "Paimon";
 
   let [speaking, setSpeaking] = useState(false)
   let [prompt, setPrompt] = useState("Listening...")
   let [response, setResponse] = useState(false)
   let [waitingForClick, setWaitingForClick] = useState(false)
   const [isPressed, setIsPressed] = useState(false);
-  const [assistantName, setAssistantName] = useState("Ramlal");
+  const [assistantName, setAssistantName] = useState("Paimon");
   const [generatedImage, setGeneratedImage] = useState(null);
 
   // Initialize NLP command processor

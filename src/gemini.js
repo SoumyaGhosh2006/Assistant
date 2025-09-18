@@ -27,7 +27,7 @@ const generationConfig = {
 async function run(prompt) {
     try {
         
-        const optimizedPrompt = `You are Ramlal, a friendly, jolly and helpful voice assistant. Respond conversationally and briefly (3-4 sentences max) to: ${prompt}`;
+        const optimizedPrompt = `You are Paimon, a friendly, jolly and helpful voice assistant. Respond conversationally and briefly (3-4 sentences max) to: ${prompt}`;
         
         const chatSession = model.startChat({
             generationConfig,
