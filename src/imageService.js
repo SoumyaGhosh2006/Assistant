@@ -1,6 +1,6 @@
 // imageService.js
 
-const HUGGING_FACE_API_KEY = "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";
+const HUGGING_FACE_API_KEY = import.meta.env.VITE_HUGGING_FACE_API_KEY;
 const IMAGE_API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1";
 
 // Pollinations API (optional fallback)
